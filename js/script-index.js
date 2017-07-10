@@ -18,7 +18,14 @@ $(document).ready( function(){
 */
 function renderHighlightedRecipes(recipesArray) {
 	console.log('Recipes: ', recipesArray);
+
+	/*agregado de Inés Vanessa Pérez*/
+	recipesArray.forEach(function(el){		
+			console.log(el.highlighted);		
+	});	
 }
+
+renderHighlightedRecipes(recipesArray);
 
 /*
 * Función que se encarga de pintar UNA recetas que tenga 
@@ -47,6 +54,7 @@ function renderActivities(activitiesArray) {
 function renderActivity(recipe) {
 	
 }
+
 
 
 
