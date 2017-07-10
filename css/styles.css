@@ -2205,5 +2205,9 @@ nav .nav-group.right {
   width: 100%;
 }
 
-/** Nivel uno**/
+/**nivel 2**/
+
+#news-title h4{
+  color: #555;
+}
 
