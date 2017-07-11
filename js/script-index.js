@@ -3,8 +3,7 @@ $(document).ready( function(){
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
 	renderActivities(activitiesArray);
-	
-
+	renderActivity(recipe);
 
 	/*nivel 2*/
 	function printNews(el){
@@ -69,8 +68,12 @@ function renderActivities(activitiesArray) {
 * archivo "templates/templates-activity.html"
 */
 function renderActivity(recipe) {
-	
+	/*agregado de Inés Vanessa Pérez Chávez*/
+	activitiesArray.forEach(function(ele){	
+		$(".list-activities").append('<a href="#" class="item-activity"><span class="attribution"><span class="avatar"><img src="' + ele.userAvatar + '" class="image-avatar"></span><span class="meta"><span class="author">'+ele.userName+'</span> made<span class="recipe">'+ele.recipeName+'</span>: '+ele.text +'<span class="location">&mdash;'+ele.place+'</span></span></span><div class="bg-image" style="background-image: url("'+ele.image+'")"></div></a>');
+	});
 }
+renderActivity();
 
 
 
