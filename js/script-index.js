@@ -2,6 +2,9 @@ $(document).ready( function(){
 
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
+	renderActivities(activitiesArray);
+	
+
 
 	/*nivel 2*/
 	function printNews(el){
@@ -38,7 +41,7 @@ renderHighlightedRecipes(recipesArray);
 function renderRecipe(recipe) {
 	/*agregado de Inés Vanessa Pérez Chávez*/
 	recipesArray.forEach(function(el){	
-		$(".list-recipes").append("<a class='item-recipe' href='#'><span class='attribution'><span class='title-recipe'>" + el.title + " </span><span class='metadata-recipe'><span class='author-recipe'>" + el.source.name + "</span><span class='bookmarks-recipe'><span class='icon-bookmark'></span></span></span></span><img src='" + el.source.url + "'/></a>");
+		$(".list-recipes").append('<a class="item-recipe" href="#"><span class="attribution"><span class="title-recipe#>' + el.title + ' </span><span class="metadata-recipe"><span class="author-recipe">' + el.source.name + '</span><span class="bookmarks-recipe"><span class="icon-bookmark"></span></span></span></span><img src="' + el.source.url + '"/></a>');
 	});
 	console.log('Voy a pintar la receta: ', recipe);
 }
@@ -51,7 +54,14 @@ renderRecipe();
 */
 function renderActivities(activitiesArray) {
 	console.log('Activities: ', activitiesArray);
+
+	/*agregado por Inés Vanessa Pérez Chávez*/	
+		if(activitiesArray.length > 0){
+			$(".wrapper-message").toggle();
+		}	
 }
+
+
 
 /*
 * Función que se encarga de pintar una actividad
