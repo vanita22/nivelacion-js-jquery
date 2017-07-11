@@ -21,7 +21,9 @@ function renderHighlightedRecipes(recipesArray) {
 
 	/*agregado de Inés Vanessa Pérez*/
 	recipesArray.forEach(function(el){		
-			console.log(el.highlighted);		
+			if(el.highlighted === true){
+				console.log(renderRecipe());
+			}		
 	});	
 }
 
@@ -35,6 +37,8 @@ renderHighlightedRecipes(recipesArray);
 */
 function renderRecipe(recipe) {
 	console.log('Voy a pintar la receta: ', recipe);
+	/*agregado de Inés Vanessa Pérez Chávez*/
+	$(".list-recipes").append("<a class='item-recipe' href='#'><span class='attribution'><span class='title-recipe'> TITULO DE LA RECETA (ATRIBUTO 'title' ) </span><span class='metadata-recipe'><span class='author-recipe'> NOMBRE DEL AUTO DE LA RECETA (ATRIBUTO 'source.name') </span><span class='bookmarks-recipe'><span class='icon-bookmark'></span></span></span></span><img src='URL DE LA IMAGEN' /></a>");
 }
 
 
